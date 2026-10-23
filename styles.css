@@ -70,7 +70,8 @@ h1,h2,h3{color:var(--ink);font-family:var(--display);font-weight:800;font-variat
 /* Početna: radovi */
 .project-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
 .project-card{min-height:410px;padding:34px;border:3px solid var(--ink);background:#fff;display:flex;flex-direction:column;align-items:flex-start}
-.project-card.featured{box-shadow:9px 9px 0 var(--red);background-image:linear-gradient(var(--red),var(--red)),linear-gradient(var(--red),var(--red));background-size:7px 7px;background-repeat:no-repeat;background-position:8px 8px,calc(100% - 8px) 8px}
+.project-card.featured{transition:transform .15s,box-shadow .15s;box-shadow:9px 9px 0 var(--red);background-image:linear-gradient(var(--red),var(--red)),linear-gradient(var(--red),var(--red));background-size:7px 7px;background-repeat:no-repeat;background-position:8px 8px,calc(100% - 8px) 8px}
+.project-card.featured:hover{transform:translate(-3px,-3px);box-shadow:12px 12px 0 var(--red)}
 .project-card.muted{border:3px dashed var(--dash)}
 .app-icon,.placeholder{width:60px;height:60px;border-radius:13px;background:var(--tint)}
 .app-icon{background:var(--ink);display:grid;place-items:center}
@@ -166,8 +167,9 @@ footer a{color:var(--ink);text-decoration:none}
 .features h2{font-size:34px;margin:0 0 20px}
 .features-lead{max-width:760px;margin:0;font-size:18px;line-height:1.8}
 .feature-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:56px}
-.feature-grid article{border:3px solid var(--ink);background:#fff;padding:28px 24px;box-shadow:8px 8px 0 var(--ink)}
-.feature-grid article:nth-child(2),.feature-grid article:nth-child(3){box-shadow:8px 8px 0 var(--red)}
+.feature-grid article{--c:var(--ink);border:3px solid var(--ink);background:#fff;padding:28px 24px;box-shadow:8px 8px 0 var(--c);transition:transform .15s,box-shadow .15s}
+.feature-grid article:nth-child(2),.feature-grid article:nth-child(3){--c:var(--red)}
+.feature-grid article:hover{transform:translate(-3px,-3px);box-shadow:11px 11px 0 var(--c)}
 .feature-grid span{font:400 13px var(--mono);color:var(--red)}
 .feature-grid h3{font-size:21px;margin:10px 0 14px}
 .feature-grid p{margin:0;font-size:15px;line-height:1.7}
@@ -188,8 +190,25 @@ footer a{color:var(--ink);text-decoration:none}
 .download p{margin:24px 0 0;font:400 15px var(--mono);color:var(--ink)}
 .download .actions{justify-content:center}
 
+/* Retro efekti: elementi ulaze na ekran u koracima (steps), kao na starim računarima. Klase dodaje script.js */
+.reveal{opacity:0}
+.fx-wipe.in{animation:wipe .6s steps(12) var(--d,0ms) both}
+.fx-left.in{animation:slide-l .5s steps(6) var(--d,0ms) both}
+.fx-right.in{animation:slide-r .5s steps(6) var(--d,0ms) both}
+.fx-stamp.in{animation:stamp .45s steps(5) var(--d,0ms) both}
+.typing:after{content:'';display:inline-block;width:.55em;height:1em;margin-left:.15em;background:currentColor;vertical-align:-.15em;animation:blink .7s steps(1) infinite}
+.counter.flick{animation:flick .3s steps(3)}
+@keyframes wipe{from{opacity:1;clip-path:inset(0 100% 0 0)}to{opacity:1;clip-path:inset(0 0 0 0)}}
+@keyframes slide-l{from{opacity:0;transform:translateX(-36px)}to{opacity:1;transform:none}}
+@keyframes slide-r{from{opacity:0;transform:translateX(36px)}to{opacity:1;transform:none}}
+@keyframes stamp{from{opacity:0;transform:translate(10px,10px)}to{opacity:1;transform:none}}
+@keyframes flick{33%{opacity:0}66%{opacity:1;color:var(--red)}}
+@keyframes crawl{to{background-position:20px 0}}
+@keyframes drop{from{clip-path:inset(0 0 100% 0)}to{clip-path:inset(0 0 0 0)}}
+.strip-top:before{animation:crawl 3s steps(4) infinite}
+
 @media (prefers-reduced-motion:reduce){.hero h1 i{animation:none}
-.phone-body:before{animation:none}
+.phone-body:before,.strip-top:before{animation:none}
 .page-bookmark,.button{transition:none}
 }
 @media (max-width:1000px){.feature-grid{grid-template-columns:1fr 1fr}
@@ -197,7 +216,9 @@ footer a{color:var(--ink);text-decoration:none}
 @media (max-width:900px){.hero{grid-template-columns:1fr;padding-top:56px}
 .hero-mark{display:none}
 .project-grid,.dark-band,.contact,.app-intro,.free-band{grid-template-columns:1fr}
-.project-card{min-height:0}
+.project-grid{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:min(82%,340px);gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-inline:24px;margin:0 -24px;padding:4px 24px 24px;scrollbar-width:none}
+.project-grid::-webkit-scrollbar{display:none}
+.project-card{min-height:0;scroll-snap-align:start}
 .dark-band{gap:48px}
 .app-hero{grid-template-columns:1fr}
 .rikna-icon{display:none}
@@ -206,7 +227,7 @@ footer a{color:var(--ink);text-decoration:none}
 @media (max-width:800px){.site-header{height:68px;gap:18px}
 .menu-toggle{display:block;order:3}
 .main-nav:not(.main-nav-simple){display:none;position:absolute;top:100%;left:0;right:0;background:#fff;border-bottom:2px solid var(--ink);padding:24px;flex-direction:column;gap:20px}
-.main-nav.open{display:flex}
+.main-nav.open{display:flex;animation:drop .3s steps(5) both}
 }
 @media (min-width:561px){.show-sm{display:none}
 }
@@ -222,6 +243,7 @@ footer a{color:var(--ink);text-decoration:none}
 .contact-form{padding:34px 22px 28px;box-shadow:8px 8px 0 var(--ink)}
 .form-row,.feature-grid{grid-template-columns:1fr}
 .form-row{gap:0}
+.project-grid{margin:0 -20px;padding:4px 20px 24px;scroll-padding-inline:20px}
 .section-heading h2{font-size:28px}
 .app-hero{padding:48px 20px}
 .screens{padding:0 20px 64px}
