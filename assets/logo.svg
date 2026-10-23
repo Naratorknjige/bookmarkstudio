@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 210 64" role="img" aria-labelledby="title">
+  <title id="title">Bookmark Studio</title>
+  <g fill="none" stroke="#1a1917" stroke-width="5" stroke-linejoin="round">
+    <path fill="#ff3038" d="M10 6h38l18 18v34L39 39 10 59z"/>
+    <path fill="#fff" d="M48 6v18h18"/>
+  </g>
+  <g font-family="Arial,Helvetica,sans-serif" font-size="24">
+    <text x="83" y="29" fill="#1a1917">bookmark</text>
+    <text x="83" y="54" fill="#ff3038">studio</text>
+  </g>
+</svg>

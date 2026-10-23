@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="sr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Bookmark Studio - mali studio za velike digitalne ideje.">
+  <title>Bookmark Studio - Početna</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Bookmark Studio - početna"><img src="assets/logo.svg" alt="Bookmark Studio"></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav"><span></span><span></span></button>
+    <nav id="main-nav" class="main-nav" aria-label="Glavna navigacija">
+      <a href="#projekti">Aplikacije</a><a href="#studio">Studio</a><a href="rikna.html">Rikna</a><a href="#kontakt">Kontakt</a>
+    </nav>
+    <div class="language" aria-label="Jezik"><button class="active" type="button">SR</button><button type="button">EN</button></div>
+  </header>
+
+  <main>
+    <section class="hero dotted">
+      <div class="hero-copy">
+        <p class="eyebrow">// STUDIO ZA APLIKACIJE</p>
+        <h1>Najkraći put<br>od <span>ideje do ekrana.</span><i></i></h1>
+        <p class="lead">Osmislimo, nacrtamo i napravimo aplikaciju za telefon - od prve skice do objave na Google Play-u i App Store-u. Pravimo svoje aplikacije, kao što je Rikna, i radimo za naručioce.</p>
+        <div class="actions"><a class="button button-dark" href="rikna.html">Vidi Riknu</a><a class="button button-light" href="#kontakt">Imam ideju za app</a></div>
+        <ul class="checks"><li>Bez nepotrebne komplikacije.</li><li>Pravo rešenje za vaš slučaj.</li><li>Bliska komunikacija, mali tim.</li><li>Od ideje do objavljene aplikacije.</li></ul>
+      </div>
+      <div class="hero-mark" aria-hidden="true">
+        <svg viewBox="0 0 160 210"><path d="M28 16h70l34 34v143L80 151 28 194z" fill="#ff3038" stroke="#191816" stroke-width="9" stroke-linejoin="round"/><path d="M98 16v34h34" fill="#fff" stroke="#191816" stroke-width="9" stroke-linejoin="round"/></svg>
+      </div>
+    </section>
+
+    <section id="projekti" class="section projects">
+      <div class="section-heading"><div><p class="eyebrow">// RADOVI</p><h2>Šta smo do sada napravili</h2></div><span class="counter">01 / 03</span></div>
+      <div class="project-grid">
+        <article class="project-card featured"><div class="app-icon">▮</div><h3>Rikna</h3><p>Digitalna polica, beleške i dnevnik čitanja na jednom mestu. Bez reklama i nepotrebne buke.</p><div class="card-footer"><a href="rikna.html">Vidi Riknu</a><span>iOS · Android</span></div></article>
+        <article class="project-card muted"><div class="placeholder"></div><p class="eyebrow">[RADNI NAZIV]</p><h3>Nova aplikacija</h3><p>Zadat nam je ideja za polje i mobilno rešenje. Aktivno radimo prototip.</p><a href="#kontakt">Javi se</a></article>
+        <article class="project-card muted"><div class="placeholder"></div><p class="eyebrow">[RADNI NAZIV]</p><h3>Sledeći projekat</h3><p>Ovo mesto čeka dobru ideju. Možda baš vašu.</p><a href="#kontakt">Pošalji ideju</a></article>
+      </div>
+    </section>
+
+    <section class="dark-band">
+      <div><p class="eyebrow">// ZA KLIJENTE</p><h2>Imate ideju?<br>Mi imamo vremena.</h2><p>Radimo sa malim timovima, izdavačima i ljudima koji žele svoju digitalnu uslugu. Ne obećavamo programersko čudo preko noći - obećavamo pošten razgovor i razumno rešenje.</p><a class="button button-red" href="#kontakt">Pričajmo</a></div>
+      <ol class="process"><li><strong>Razgovor</strong><span>Razumemo ideju i pravimo plan.</span></li><li><strong>Dizajn i izrada</strong><span>Ekran po ekran, uz redovne provere.</span></li><li><strong>Objava</strong><span>Priprema za prodavnice i puštanje aplikacije.</span></li><li><strong>Posle objave</strong><span>Ispravke, održavanje i sledeći koraci.</span></li></ol>
+    </section>
+
+    <section id="studio" class="about strip-frame">
+      <h2>Mali studio, raštrkan po Srbiji: <span>Beograd, Pančevo, Smederevska Palanka i Kruševac.</span> Vidimo se retko a radimo stalno.</h2>
+      <p>Ne znamo da pravimo ogromne stvari i komplikujemo. Znamo da napravimo malu aplikaciju koja radi tačno ono što treba - i da je posle podržimo.</p>
+    </section>
+
+    <section id="kontakt" class="contact dotted">
+      <form class="contact-form" novalidate>
+        <p class="eyebrow">// PIŠITE NAM</p><h2>Pišite nam</h2><p>Jedan mejl, jedan čovek sa druge strane. Javljamo se u roku od dva radna dana.</p>
+        <div class="form-row"><label>Vaše ime<input name="name" autocomplete="name" required></label><label>Vaš email<input type="email" name="email" autocomplete="email" required></label></div>
+        <label>Tema<select name="topic"><option>Imam ideju za aplikaciju</option><option>Treba mi dizajn</option><option>Pitanje o Rikni</option><option>Nešto drugo</option></select></label>
+        <label>Poruka<textarea name="message" rows="5" placeholder="U par rečenica - šta vam treba i do kada." required></textarea></label>
+        <label class="consent"><input type="checkbox" required> Slažem se da moji podaci budu poslati radi odgovora.</label>
+        <div class="form-actions"><button class="button button-red" type="submit">Pošalji poruku</button><span class="form-status" aria-live="polite"></span></div>
+      </form>
+      <aside><p class="eyebrow">// KONTAKT</p><h3>Bookmark Studio</h3><a href="mailto:zdravo@bookmarkstudio.rs">zdravo@bookmarkstudio.rs</a><p>Ako ste iz izdavaštva, obrazovanja ili imate aplikaciju koja treba da se sredi - posebno nam je drago da razgovaramo.</p></aside>
+    </section>
+  </main>
+  <footer><p>Bookmark Studio postoji u okviru izdavačke kuće Booka. Pravimo male proizvode pažljivo.</p><p>© <span data-year></span> · dizajn i programiranje</p></footer>
+</body>
+</html>
