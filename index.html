@@ -6,6 +6,8 @@
   <meta name="description" content="Bookmark Studio - mali studio za aplikacije. Od ideje do objave na Google Play-u i App Store-u.">
   <title>Bookmark Studio - Početna</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="alternate" hreflang="sr" href="index.html">
+  <link rel="alternate" hreflang="en" href="en/index.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;600&display=swap">
@@ -22,7 +24,7 @@
     <nav id="main-nav" class="main-nav" aria-label="Glavna navigacija">
       <a href="#projekti">Aplikacije</a><a href="#saradnja">Saradnja</a><a href="#studio">O nama</a><a href="#kontakt">Kontakt</a>
     </nav>
-    <div class="language" aria-label="Jezik"><button class="active" type="button">SR</button><button type="button">EN</button></div>
+    <div class="language" aria-label="Jezik"><span class="active" aria-current="true">SR</span><a href="en/index.html" hreflang="en" lang="en">EN</a></div>
   </header>
   <a class="page-bookmark" href="#vrh" aria-label="Nazad na vrh"><svg viewBox="0 0 40 74" aria-hidden="true"><path d="M4-6v74l16-12 16 12V-6" fill="#ff3030" stroke="#1c1b19" stroke-width="4" stroke-linejoin="round"/></svg></a>
 
@@ -33,7 +35,7 @@
         <h1>Najkraći put<br><span>od ideje do ekrana.</span><i></i></h1>
         <p class="lead">Osmislimo, nacrtamo i napravimo aplikaciju za telefon — od prve skice do objave na Google Play-u i App Store-u. Pravimo svoje aplikacije, kao što je Rikna, i radimo po narudžbini. Posle objave ostajemo tu: ispravke, nove verzije i sitnice koje niko ne primeti dok ne zafale.</p>
         <div class="actions"><a class="button button-dark" href="rikna.html">Vidi Riknu</a><a class="button button-light" href="#kontakt">Imam ideju za app</a></div>
-        <ul class="checks"><li>Bez pretplate na vazduh.</li><li>Prva verzija je lak deo.</li><li>Ništa revolucionarno. Samo radi.</li><li>Ako treba objašnjenje, nismo završili posao.</li></ul>
+        <ul class="checks"><li>Bez pretplate na vazduh.</li><li>Prva verzija je lakši deo.</li><li>Ništa revolucionarno. Samo radi.</li><li>Ako treba objašnjenje, nismo završili posao.</li></ul>
       </div>
       <div class="hero-mark" aria-hidden="true">
         <svg viewBox="9 7 144 192"><path d="M16 14h82l48 48v130l-65-46-65 46z" fill="#ff3030" stroke="#1c1b19" stroke-width="9" stroke-linejoin="round"/><path d="M98 14l48 48H98z" fill="#fff" stroke="#1c1b19" stroke-width="9" stroke-linejoin="round"/></svg>
@@ -68,7 +70,7 @@
       <div>
         <p class="eyebrow">// Za klijente</p>
         <h2>Imate ideju?<br>Mi imamo vremena.</h2>
-        <p>Radimo sa malim timovima, izdavačima i ljudima koji tačno znaju šta hoće, ali nemaju svog programera. Ne prodajemo pakete, nego sednemo i razmislimo zajedno sa vama.</p>
+        <p>Radimo sa malim timovima i ljudima koji tačno znaju šta hoće, ali nemaju svog programera. Ne prodajemo pakete, nego sednemo i razmislimo zajedno sa vama.</p>
         <a class="button button-red button-shadow-light" href="#kontakt">Pišite nam</a>
       </div>
       <ol class="process">
@@ -82,13 +84,13 @@
     <section id="studio" class="about">
       <p class="eyebrow eyebrow-muted">// O nama</p>
       <h2>Mali studio, raštrkan po Srbiji: <span>Beograd, Pančevo, Smederevska Palanka i Kruševac</span>. Viđamo se retko, a radimo stalno.</h2>
-      <p>Ne znamo da pravimo ogromne stvari i ne pokušavamo. Znamo da napravimo malu aplikaciju koja radi tačno ono što treba, pa da je posle godinama doteramo.</p>
+      <p>Ne znamo da pravimo ogromne stvari i ne pokušavamo. Znamo da napravimo malu aplikaciju koja radi tačno ono što treba, pa da je posle godinama doteravamo.</p>
     </section>
 
     <section id="kontakt" class="contact dotted strip-top">
       <form class="contact-form corners" novalidate>
         <h2>Pišite nam</h2>
-        <p>Jedan mejl, jedan čovek sa druge strane. Javljamo se u roku od dva radna dana.</p>
+        <p>Jedan mejl, jedan čovek sa druge strane. Javljamo se u roku od jednog dana.</p>
         <div class="form-row">
           <label>Ime i prezime<input name="name" autocomplete="name" placeholder="Petar Petrović" required></label>
           <label>Mejl adresa<input type="email" name="email" autocomplete="email" placeholder="petar@primer.rs" required></label>
@@ -101,11 +103,14 @@
       </form>
       <aside>
         <h3>Kontakt</h3>
-        <p class="mono"><a href="mailto:info@bookmarkstudio.rs">info@bookmarkstudio.rs</a><br>Pančevo, Srbija</p>
-        <p class="note">Ako ste iz izdavaštva, slobodno pišite i bez gotove ideje. Rado pomognemo da se stvar razbistri.</p>
+        <p class="mono"><a href="mailto:info@bookmarkstudio.rs">info@bookmarkstudio.rs</a></p>
+        <div class="reply-box"><span>Odgovor stiže</span><strong>u roku od jednog dana</strong></div>
+        <h4>Šta je korisno da napišete</h4>
+        <ul class="checks"><li>Ideju u par rečenica</li><li>Za koga je aplikacija</li><li>Okvirni rok</li><li>Imate li već dizajn ili tekstove</li></ul>
+        <p class="small">Ništa od ovoga nije obavezno. I jedna rečenica je sasvim dobar početak.</p>
       </aside>
     </section>
   </main>
-  <footer><p>Bookmark Studio posluje u okviru izdavačke kuće Narator iz Pančeva, koja objavljuje ilustrovane klasike i savremena izdanja.</p><p>© <span data-year></span></p></footer>
+  <footer><p>Bookmark Studio posluje u okviru izdavačke kuće Narator, koja objavljuje ilustrovane klasike i savremena izdanja.</p><p>© <span data-year></span></p></footer>
 </body>
 </html>

@@ -6,6 +6,8 @@
   <meta name="description" content="Rikna - domaća aplikacija za čitaoce.">
   <title>Rikna - Bookmark Studio</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="alternate" hreflang="sr" href="rikna.html">
+  <link rel="alternate" hreflang="en" href="en/rikna.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;600&display=swap">
@@ -18,8 +20,8 @@
       <svg class="brand-mark" viewBox="9 7 144 192" aria-hidden="true"><path d="M16 14h82l48 48v130l-65-46-65 46z" fill="#ff3030" stroke="#1c1b19" stroke-width="13" stroke-linejoin="round"/><path d="M98 14l48 48H98z" fill="#fff" stroke="#1c1b19" stroke-width="13" stroke-linejoin="round"/></svg>
       <span class="brand-name">bookmark<span>studio</span></span>
     </a>
-    <nav class="main-nav main-nav-simple" aria-label="Glavna navigacija"><a href="index.html">Nazad na početnu</a></nav>
-    <div class="language" aria-label="Jezik"><button class="active" type="button">SR</button><button type="button">EN</button></div>
+    <nav class="main-nav main-nav-simple" aria-label="Glavna navigacija"><a href="index.html"><span class="hide-sm">Nazad na početnu</span><span class="show-sm">← Početna</span></a></nav>
+    <div class="language" aria-label="Jezik"><span class="active" aria-current="true">SR</span><a href="en/rikna.html" hreflang="en" lang="en">EN</a></div>
   </header>
   <a class="page-bookmark" href="#vrh" aria-label="Nazad na vrh"><svg viewBox="0 0 40 74" aria-hidden="true"><path d="M4-6v74l16-12 16 12V-6" fill="#ff3030" stroke="#1c1b19" stroke-width="4" stroke-linejoin="round"/></svg></a>
 
@@ -50,11 +52,12 @@
 
     <section class="screens">
       <div class="section-heading section-heading-plain"><h2>Kako izgleda</h2><span>povuci u stranu →</span></div>
+      <!-- Pravi skrinšot: umesto <span>[SKRINŠOT 01]</span> stavi <img src="assets/screens/polica.png" alt="Polica"> -->
       <div class="phone-row" tabindex="0" aria-label="Ekrani aplikacije">
-        <figure class="phone"><div class="phone-body"><div class="phone-bar"></div><div class="phone-screen"><span>[SKRINŠOT 01]</span></div><div class="phone-keys"><i></i><i></i><i></i><i></i><i></i><i></i></div></div><figcaption>Polica — Čitam, Pročitano, Lista želja</figcaption></figure>
-        <figure class="phone"><div class="phone-body"><div class="phone-bar"></div><div class="phone-screen"><span>[SKRINŠOT 02]</span></div><div class="phone-keys"><i></i><i></i><i></i><i></i><i></i><i></i></div></div><figcaption>Kalendar čitanja i niz dana</figcaption></figure>
-        <figure class="phone"><div class="phone-body"><div class="phone-bar"></div><div class="phone-screen"><span>[SKRINŠOT 03]</span></div><div class="phone-keys"><i></i><i></i><i></i><i></i><i></i><i></i></div></div><figcaption>Ocena i utisak o pročitanoj knjizi</figcaption></figure>
-        <figure class="phone"><div class="phone-body"><div class="phone-bar"></div><div class="phone-screen"><span>[SKRINŠOT 04]</span></div><div class="phone-keys"><i></i><i></i><i></i><i></i><i></i><i></i></div></div><figcaption>Feed — utisci ljudi koje pratiš</figcaption></figure>
+        <figure class="phone"><div class="phone-body"><i class="phone-side"></i><div class="phone-shell"><div class="phone-top"><i></i><b></b><i></i></div><div class="phone-screen"><span>[SKRINŠOT 01]</span></div><div class="phone-chin"><i></i><b></b><i></i></div><div class="phone-grille"></div></div></div><figcaption>Polica — Čitam, Pročitano, Lista želja</figcaption></figure>
+        <figure class="phone"><div class="phone-body"><i class="phone-side"></i><div class="phone-shell"><div class="phone-top"><i></i><b></b><i></i></div><div class="phone-screen"><span>[SKRINŠOT 02]</span></div><div class="phone-chin"><i></i><b></b><i></i></div><div class="phone-grille"></div></div></div><figcaption>Kalendar čitanja i niz dana</figcaption></figure>
+        <figure class="phone"><div class="phone-body"><i class="phone-side"></i><div class="phone-shell"><div class="phone-top"><i></i><b></b><i></i></div><div class="phone-screen"><span>[SKRINŠOT 03]</span></div><div class="phone-chin"><i></i><b></b><i></i></div><div class="phone-grille"></div></div></div><figcaption>Ocena i utisak o pročitanoj knjizi</figcaption></figure>
+        <figure class="phone"><div class="phone-body"><i class="phone-side"></i><div class="phone-shell"><div class="phone-top"><i></i><b></b><i></i></div><div class="phone-screen"><span>[SKRINŠOT 04]</span></div><div class="phone-chin"><i></i><b></b><i></i></div><div class="phone-grille"></div></div></div><figcaption>Feed — utisci ljudi koje pratiš</figcaption></figure>
       </div>
     </section>
 
@@ -81,6 +84,6 @@
       <div class="actions"><a class="button button-dark" href="#">Google Play</a><a class="button button-light" href="#">App Store</a></div>
     </section>
   </main>
-  <footer><p>Rikna je aplikacija studija Bookmark Studio, koji posluje u okviru izdavačke kuće Narator iz Pančeva. Pitanja i prijave grešaka: <a href="mailto:info@bookmarkstudio.rs">info@bookmarkstudio.rs</a></p><p>© <span data-year></span></p></footer>
+  <footer><p>Rikna je aplikacija studija Bookmark Studio, koji posluje u okviru izdavačke kuće Narator. Pitanja i prijave grešaka: <a href="mailto:info@bookmarkstudio.rs">info@bookmarkstudio.rs</a></p><p>© <span data-year></span></p></footer>
 </body>
 </html>
