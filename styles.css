@@ -120,6 +120,8 @@ h1,h2,h3{color:var(--ink);font-family:var(--display);font-weight:800;font-variat
 .form-actions a{text-decoration:none}
 .form-status{margin:16px 0 0;font-size:14px;color:var(--muted)}
 .form-status:empty{display:none}
+.contact-form .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.contact-form{position:relative}
 .contact aside h3{font-size:24px;margin:0 0 20px}
 .contact aside .mono{font:400 15px/1.6 var(--mono);color:var(--ink);margin:0 0 28px}
 .reply-box{border:3px solid var(--ink);background:#fff;box-shadow:6px 6px 0 var(--red);padding:18px 22px;margin:0 0 40px;max-width:330px}

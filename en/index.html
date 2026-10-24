@@ -99,7 +99,9 @@
     </section>
 
     <section id="contact" class="contact dotted strip-top">
-      <form class="contact-form corners" novalidate>
+      <form class="contact-form corners" action="../kontakt.php" method="post" novalidate>
+        <input type="hidden" name="lang" value="en">
+        <label class="hp" aria-hidden="true">Leave empty<input name="website" tabindex="-1" autocomplete="off"></label>
         <h2>Write to us</h2>
         <p>One email, one person on the other end. We reply within one day.</p>
         <div class="form-row">

@@ -99,7 +99,9 @@
     </section>
 
     <section id="kontakt" class="contact dotted strip-top">
-      <form class="contact-form corners" novalidate>
+      <form class="contact-form corners" action="kontakt.php" method="post" novalidate>
+        <input type="hidden" name="lang" value="sr">
+        <label class="hp" aria-hidden="true">Ne popunjavajte<input name="website" tabindex="-1" autocomplete="off"></label>
         <h2>Pišite nam</h2>
         <p>Jedan mejl, jedan čovek sa druge strane. Javljamo se u roku od jednog dana.</p>
         <div class="form-row">
