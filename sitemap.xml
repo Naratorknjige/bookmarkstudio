@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Mapa sajta za Google. Kad se pređe na bookmarkstudio.rs, zameniti adrese ispod. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://naratorknjige.github.io/bookmarkstudio/</loc>
+    <lastmod>2026-10-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://naratorknjige.github.io/bookmarkstudio/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://naratorknjige.github.io/bookmarkstudio/en/"/>
+  </url>
+  <url>
+    <loc>https://naratorknjige.github.io/bookmarkstudio/en/</loc>
+    <lastmod>2026-10-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://naratorknjige.github.io/bookmarkstudio/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://naratorknjige.github.io/bookmarkstudio/en/"/>
+  </url>
+  <url>
+    <loc>https://naratorknjige.github.io/bookmarkstudio/rikna.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://naratorknjige.github.io/bookmarkstudio/rikna.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://naratorknjige.github.io/bookmarkstudio/en/rikna.html"/>
+  </url>
+  <url>
+    <loc>https://naratorknjige.github.io/bookmarkstudio/en/rikna.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://naratorknjige.github.io/bookmarkstudio/rikna.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://naratorknjige.github.io/bookmarkstudio/en/rikna.html"/>
+  </url>
+  <url>
+    <loc>https://naratorknjige.github.io/bookmarkstudio/privatnost.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://naratorknjige.github.io/bookmarkstudio/privatnost.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://naratorknjige.github.io/bookmarkstudio/en/privacy.html"/>
+  </url>
+  <url>
+    <loc>https://naratorknjige.github.io/bookmarkstudio/en/privacy.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://naratorknjige.github.io/bookmarkstudio/privatnost.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://naratorknjige.github.io/bookmarkstudio/en/privacy.html"/>
+  </url>
+</urlset>

@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="sr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Stranica ne postoji - Bookmark Studio</title>
+  <!-- Ova strana se prikazuje na bilo kojoj pogrešnoj adresi, pa sve putanje računamo od korena sajta (radi i na /bookmarkstudio/ i na domenu) -->
+  <script>document.write('<base href="' + (location.pathname.indexOf('/bookmarkstudio/') === 0 ? '/bookmarkstudio/' : '/') + '">')</script>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;600&display=swap">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Bookmark Studio - početna">
+      <svg class="brand-mark" viewBox="9 7 144 192" aria-hidden="true"><path d="M16 14h82l48 48v130l-65-46-65 46z" fill="#ff3030" stroke="#1c1b19" stroke-width="13" stroke-linejoin="round"/><path d="M98 14l48 48H98z" fill="#fff" stroke="#1c1b19" stroke-width="13" stroke-linejoin="round"/></svg>
+      <span class="brand-name">bookmark<span>studio</span></span>
+    </a>
+    <div class="language" aria-label="Jezik"><a href="index.html">SR</a><a href="en/index.html" hreflang="en" lang="en">EN</a></div>
+  </header>
+
+  <main class="notfound dotted">
+    <div>
+      <div class="lost-mark" aria-hidden="true"><svg viewBox="9 7 144 192"><path d="M16 14h82l48 48v130l-65-46-65 46z" fill="#ff3030" stroke="#1c1b19" stroke-width="10" stroke-linejoin="round"/><path d="M98 14l48 48H98z" fill="#fff" stroke="#1c1b19" stroke-width="10" stroke-linejoin="round"/></svg></div>
+      <h1>404<i></i></h1>
+      <p>Ova stranica je izgubila bukmark. Možda je adresa pogrešno ukucana, ili je strana premeštena.</p>
+      <p lang="en">This page lost its bookmark. The address may be mistyped, or the page has moved.</p>
+      <div class="actions"><a class="button button-dark" href="index.html">Na početnu</a><a class="button button-light" href="en/index.html" lang="en">Go to home</a></div>
+    </div>
+  </main>
+  <footer><p>Bookmark Studio · <a href="mailto:info@bookmarkstudio.rs">info@bookmarkstudio.rs</a></p><p>404</p></footer>
+</body>
+</html>

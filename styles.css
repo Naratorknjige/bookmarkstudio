@@ -192,6 +192,39 @@ footer a{color:var(--ink);text-decoration:none}
 .download p{margin:24px 0 0;font:400 15px var(--mono);color:var(--ink)}
 .download .actions{justify-content:center}
 
+/* Uslovi i privatnost */
+.legal-hero{padding:56px var(--pad) 48px;border-bottom:2px solid var(--ink)}
+.legal-hero h1{font-size:clamp(34px,4.4vw,54px);margin:0 0 18px}
+.legal-hero h1 span{color:var(--red)}
+.legal{display:grid;grid-template-columns:220px minmax(0,720px);gap:60px;padding:64px var(--pad) 90px}
+.legal-toc{position:sticky;top:28px;align-self:start}
+.legal-toc ol{list-style:none;margin:0;padding:0;display:grid;gap:10px;font:400 13px/1.4 var(--mono)}
+.legal-toc a{text-decoration:none;color:var(--muted)}
+.legal-toc a:hover{color:var(--red)}
+.legal-summary{border:3px solid var(--ink);background:#fff;box-shadow:8px 8px 0 var(--red);padding:26px 28px;margin:0 0 48px}
+.legal-summary h2{margin-top:0!important}
+.legal-body h2{font-size:24px;margin:52px 0 14px;scroll-margin-top:24px}
+.legal-body h2:first-child{margin-top:0}
+.legal-body h3{font-size:18px;margin:28px 0 10px}
+.legal-body p,.legal-body li{font-size:16px;line-height:1.8}
+.legal-body p{margin:0 0 14px}
+.legal-body ul{list-style:none;margin:0 0 14px;padding:0}
+.legal-body li{position:relative;padding-left:22px;margin-bottom:6px}
+.legal-body li:before{content:'';position:absolute;left:0;top:.68em;width:7px;height:7px;background:var(--red)}
+.legal-body a{color:var(--ink)}
+.legal-body a:hover{color:var(--red)}
+.legal-date{font:400 13px var(--mono);color:var(--muted)}
+
+/* Strana 404 */
+.notfound{min-height:calc(100vh - 220px);display:grid;place-items:center;align-content:center;text-align:center;padding:80px var(--pad)}
+.lost-mark{width:72px;margin:0 auto 10px;transform-origin:50% 0;animation:swing 2.6s steps(8) infinite alternate}
+@keyframes swing{from{transform:rotate(-14deg)}to{transform:rotate(14deg)}}
+.notfound h1{font-size:clamp(110px,20vw,200px);line-height:.9;margin:0 0 26px}
+.notfound h1 i{display:inline-block;width:.36em;height:.62em;margin-left:.08em;background:var(--red);vertical-align:-.02em;animation:blink 1.1s steps(1) infinite}
+.notfound p{margin:0 auto;max-width:520px;font-size:17px;line-height:1.8}
+.notfound p[lang=en]{margin-top:10px;font:400 14px/1.7 var(--mono);color:var(--muted)}
+.notfound .actions{justify-content:center}
+
 /* Retro efekti: elementi ulaze na ekran u koracima (steps), kao na starim računarima. Klase dodaje script.js */
 .reveal{opacity:0}
 .fx-wipe.in{animation:wipe .6s steps(12) var(--d,0ms) both}
@@ -210,12 +243,14 @@ footer a{color:var(--ink);text-decoration:none}
 .strip-top:before{animation:crawl 3s steps(4) infinite}
 
 @media (prefers-reduced-motion:reduce){.hero h1 i{animation:none}
-.phone-body:before,.strip-top:before{animation:none}
+.phone-body:before,.strip-top:before,.lost-mark,.notfound h1 i{animation:none}
 .page-bookmark,.button{transition:none}
 }
 @media (max-width:1000px){.feature-grid{grid-template-columns:1fr 1fr}
 }
 @media (max-width:900px){.hero{grid-template-columns:1fr;padding-top:56px}
+.legal{grid-template-columns:1fr;gap:36px}
+.legal-toc{position:static}
 .hero-mark{display:none}
 .project-grid,.dark-band,.contact,.app-intro,.free-band{grid-template-columns:1fr}
 .project-grid{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:min(82%,340px);gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-inline:24px;margin:0 -24px;padding:4px 24px 24px;scrollbar-width:none}
@@ -245,6 +280,9 @@ footer a{color:var(--ink);text-decoration:none}
 .contact-form{padding:34px 22px 28px;box-shadow:8px 8px 0 var(--ink)}
 .form-row,.feature-grid{grid-template-columns:1fr}
 .form-row{gap:0}
+.legal-hero{padding:44px 20px 40px}
+.legal{padding:44px 20px 64px}
+.legal-summary{padding:22px 20px;box-shadow:6px 6px 0 var(--red)}
 .project-grid{margin:0 -20px;padding:4px 20px 24px;scroll-padding-inline:20px}
 .section-heading h2{font-size:28px}
 .app-hero{padding:48px 20px}

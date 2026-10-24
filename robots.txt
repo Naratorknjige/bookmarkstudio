@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://naratorknjige.github.io/bookmarkstudio/sitemap.xml
