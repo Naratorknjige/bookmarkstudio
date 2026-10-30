@@ -1,7 +1,11 @@
 <?php
 // Prima poruke iz kontakt forme i šalje ih na info@bookmarkstudio.rs.
-// Radi samo na hostingu koji ima PHP i funkciju mail(). GitHub Pages ne pokreće PHP,
-// pa tamo forma umesto ovoga otvara program za poštu (vidi script.js).
+// Ako pored ovog fajla postoji kontakt-config.php (samo na serveru, nikad na GitHub-u),
+// šalje preko SMTP naloga iz njega; inače preko PHP funkcije mail().
+// Primer kontakt-config.php:
+//   <?php return ['host' => 'mail.primer.rs', 'port' => 465, 'secure' => 'ssl',
+//                 'user' => 'info@bookmarkstudio.rs', 'pass' => 'lozinka'];
+// 'secure' je 'ssl' (obično port 465) ili 'tls' (obično port 587).
 
 const TO = 'info@bookmarkstudio.rs';
 // Pošiljalac mora biti adresa na domenu sajta, inače mejl lako završi u spamu.
@@ -32,6 +36,53 @@ function cut(string $value, int $max): string {
 // Jedan red teksta, bez prelaska u novi red (sprečava ubacivanje lažnih zaglavlja u mejl)
 function line(string $key, int $max): string {
     return trim(cut(str_replace(["\r", "\n"], ' ', (string)($_POST[$key] ?? '')), $max));
+}
+
+// Šalje gotov mejl preko SMTP servera, sa prijavom (AUTH LOGIN)
+function smtp_send(array $c, string $headers, string $subject, string $body): bool {
+    $prefix = ($c['secure'] ?? 'ssl') === 'ssl' ? 'ssl://' : 'tcp://';
+    $fp = @stream_socket_client($prefix . $c['host'] . ':' . (int)($c['port'] ?? 465), $errno, $errstr, 15);
+    if (!$fp) {
+        return false;
+    }
+    stream_set_timeout($fp, 15);
+    $read = function () use ($fp): int {
+        $code = 0;
+        while (($line = fgets($fp, 1024)) !== false) {
+            $code = (int)substr($line, 0, 3);
+            if (!isset($line[3]) || $line[3] === ' ') {
+                break;
+            }
+        }
+        return $code;
+    };
+    $say = function (string $cmd, array $ok) use ($fp, $read): bool {
+        fwrite($fp, $cmd . "\r\n");
+        return in_array($read(), $ok, true);
+    };
+    $host = preg_replace('/[^a-z0-9.-]/i', '', $_SERVER['SERVER_NAME'] ?? 'localhost') ?: 'localhost';
+    $ok = $read() === 220 && $say("EHLO $host", [250]);
+    if ($ok && ($c['secure'] ?? '') === 'tls') {
+        $ok = $say('STARTTLS', [220])
+            && stream_socket_enable_crypto($fp, true, STREAM_CRYPTO_METHOD_TLS_CLIENT)
+            && $say("EHLO $host", [250]);
+    }
+    $ok = $ok
+        && $say('AUTH LOGIN', [334])
+        && $say(base64_encode($c['user']), [334])
+        && $say(base64_encode($c['pass']), [235])
+        && $say('MAIL FROM:<' . FROM . '>', [250])
+        && $say('RCPT TO:<' . TO . '>', [250, 251])
+        && $say('DATA', [354]);
+    if ($ok) {
+        $message = 'To: ' . TO . "\r\nSubject: $subject\r\nDate: " . date('r') . "\r\n"
+            . 'Message-ID: <' . bin2hex(random_bytes(12)) . '@bookmarkstudio.rs>' . "\r\n$headers\r\n\r\n"
+            . preg_replace('/^\./m', '..', $body);
+        $ok = $say($message . "\r\n.", [250]);
+        $say('QUIT', [221]);
+    }
+    fclose($fp);
+    return $ok;
 }
 
 if (($_SERVER['REQUEST_METHOD'] ?? '') !== 'POST') {
@@ -71,8 +122,13 @@ $headers = implode("\r\n", [
 $encodedSubject = '=?UTF-8?B?' . base64_encode($subject) . '?=';
 $encodedBody = chunk_split(base64_encode($body));
 
-// Neki hostinzi traže -f (adresa pošiljaoca za povratne poruke), a neki ga ne dozvoljavaju
-$sent = @mail(TO, $encodedSubject, $encodedBody, $headers, '-f' . FROM)
-    || @mail(TO, $encodedSubject, $encodedBody, $headers);
+$config = __DIR__ . '/kontakt-config.php';
+if (is_file($config)) {
+    $sent = smtp_send(require $config, $headers, $encodedSubject, rtrim($encodedBody));
+} else {
+    // Neki serveri traže -f (adresa pošiljaoca za povratne poruke), a neki ga ne dozvoljavaju
+    $sent = @mail(TO, $encodedSubject, $encodedBody, $headers, '-f' . FROM)
+        || @mail(TO, $encodedSubject, $encodedBody, $headers);
+}
 
 finish($sent, $sent ? 200 : 500);

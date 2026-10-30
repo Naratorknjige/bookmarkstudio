@@ -10,3 +10,6 @@ desktop.ini
 # Editori
 .vscode/
 .idea/
+
+# Podešavanja forme koja postoje samo na serveru (lozinka za mejl)
+kontakt-config.php

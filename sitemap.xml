@@ -1,40 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Mapa sajta za Google. Kad se pređe na bookmarkstudio.rs, zameniti adrese ispod. -->
+<!-- Mapa sajta za Google. Adrese ispod vode na bookmarkstudio.rs. -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://naratorknjige.github.io/bookmarkstudio/</loc>
+    <loc>https://bookmarkstudio.rs/</loc>
     <lastmod>2026-10-24</lastmod>
-    <xhtml:link rel="alternate" hreflang="sr" href="https://naratorknjige.github.io/bookmarkstudio/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://naratorknjige.github.io/bookmarkstudio/en/"/>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://bookmarkstudio.rs/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookmarkstudio.rs/en/"/>
   </url>
   <url>
-    <loc>https://naratorknjige.github.io/bookmarkstudio/en/</loc>
+    <loc>https://bookmarkstudio.rs/en/</loc>
     <lastmod>2026-10-24</lastmod>
-    <xhtml:link rel="alternate" hreflang="sr" href="https://naratorknjige.github.io/bookmarkstudio/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://naratorknjige.github.io/bookmarkstudio/en/"/>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://bookmarkstudio.rs/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookmarkstudio.rs/en/"/>
   </url>
   <url>
-    <loc>https://naratorknjige.github.io/bookmarkstudio/rikna.html</loc>
+    <loc>https://bookmarkstudio.rs/rikna.html</loc>
     <lastmod>2026-10-24</lastmod>
-    <xhtml:link rel="alternate" hreflang="sr" href="https://naratorknjige.github.io/bookmarkstudio/rikna.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://naratorknjige.github.io/bookmarkstudio/en/rikna.html"/>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://bookmarkstudio.rs/rikna.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookmarkstudio.rs/en/rikna.html"/>
   </url>
   <url>
-    <loc>https://naratorknjige.github.io/bookmarkstudio/en/rikna.html</loc>
+    <loc>https://bookmarkstudio.rs/en/rikna.html</loc>
     <lastmod>2026-10-24</lastmod>
-    <xhtml:link rel="alternate" hreflang="sr" href="https://naratorknjige.github.io/bookmarkstudio/rikna.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://naratorknjige.github.io/bookmarkstudio/en/rikna.html"/>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://bookmarkstudio.rs/rikna.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookmarkstudio.rs/en/rikna.html"/>
   </url>
   <url>
-    <loc>https://naratorknjige.github.io/bookmarkstudio/privatnost.html</loc>
+    <loc>https://bookmarkstudio.rs/privatnost.html</loc>
     <lastmod>2026-10-24</lastmod>
-    <xhtml:link rel="alternate" hreflang="sr" href="https://naratorknjige.github.io/bookmarkstudio/privatnost.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://naratorknjige.github.io/bookmarkstudio/en/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://bookmarkstudio.rs/privatnost.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookmarkstudio.rs/en/privacy.html"/>
   </url>
   <url>
-    <loc>https://naratorknjige.github.io/bookmarkstudio/en/privacy.html</loc>
+    <loc>https://bookmarkstudio.rs/en/privacy.html</loc>
     <lastmod>2026-10-24</lastmod>
-    <xhtml:link rel="alternate" hreflang="sr" href="https://naratorknjige.github.io/bookmarkstudio/privatnost.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://naratorknjige.github.io/bookmarkstudio/en/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://bookmarkstudio.rs/privatnost.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookmarkstudio.rs/en/privacy.html"/>
   </url>
 </urlset>
