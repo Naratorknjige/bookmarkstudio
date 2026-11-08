@@ -1,16 +1,16 @@
 <?php
-// Prima poruke iz kontakt forme i šalje ih na info@bookmarkstudio.rs.
+// Prima poruke iz kontakt forme i šalje ih na office@bookmarkstudio.rs.
 // Ako pored ovog fajla postoji kontakt-config.php (samo na serveru, nikad na GitHub-u),
 // šalje preko SMTP naloga iz njega; inače preko PHP funkcije mail().
 // Primer kontakt-config.php:
 //   <?php return ['host' => 'mail.primer.rs', 'port' => 465, 'secure' => 'ssl',
-//                 'user' => 'info@bookmarkstudio.rs', 'pass' => 'lozinka'];
+//                 'user' => 'office@bookmarkstudio.rs', 'pass' => 'lozinka'];
 // 'secure' je 'ssl' (obično port 465) ili 'tls' (obično port 587).
 
-const TO = 'info@bookmarkstudio.rs';
+const TO = 'office@bookmarkstudio.rs';
 // Pošiljalac mora biti adresa na domenu sajta, inače mejl lako završi u spamu.
 // Posetiočeva adresa ide u Reply-To, pa "Odgovori" ide direktno njemu.
-const FROM = 'info@bookmarkstudio.rs';
+const FROM = 'office@bookmarkstudio.rs';
 
 $wantsJson = strpos($_SERVER['HTTP_ACCEPT'] ?? '', 'application/json') !== false;
 $lang = ($_POST['lang'] ?? '') === 'en' ? 'en' : 'sr';
