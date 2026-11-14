@@ -211,6 +211,9 @@ footer a{color:var(--ink);text-decoration:none}
 .legal-body ul{list-style:none;margin:0 0 14px;padding:0}
 .legal-body li{position:relative;padding-left:22px;margin-bottom:6px}
 .legal-body li:before{content:'';position:absolute;left:0;top:.68em;width:7px;height:7px;background:var(--red)}
+.legal-body ol{list-style:none;margin:0 0 14px;padding:0;counter-reset:step}
+.legal-body ol li{padding-left:34px;counter-increment:step}
+.legal-body ol li:before{content:counter(step,decimal-leading-zero);top:0;width:auto;height:auto;background:none;font:500 14px/1.8 var(--mono);color:var(--red)}
 .legal-body a{color:var(--ink)}
 .legal-body a:hover{color:var(--red)}
 .legal-date{font:400 13px var(--mono);color:var(--muted)}
