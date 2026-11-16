@@ -14,15 +14,27 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://bookmarkstudio.rs/en/"/>
   </url>
   <url>
-    <loc>https://bookmarkstudio.rs/rikna.html</loc>
+    <loc>https://bookmarkstudio.rs/rikna/</loc>
     <lastmod>2026-10-24</lastmod>
-    <xhtml:link rel="alternate" hreflang="sr" href="https://bookmarkstudio.rs/rikna.html"/>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://bookmarkstudio.rs/rikna/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://bookmarkstudio.rs/en/rikna.html"/>
+  </url>
+  <url>
+    <loc>https://bookmarkstudio.rs/rikna/privatnost.html</loc>
+    <lastmod>2026-11-17</lastmod>
+  </url>
+  <url>
+    <loc>https://bookmarkstudio.rs/rikna/uslovi.html</loc>
+    <lastmod>2026-11-17</lastmod>
+  </url>
+  <url>
+    <loc>https://bookmarkstudio.rs/rikna/pravila-zajednice.html</loc>
+    <lastmod>2026-11-17</lastmod>
   </url>
   <url>
     <loc>https://bookmarkstudio.rs/en/rikna.html</loc>
     <lastmod>2026-10-24</lastmod>
-    <xhtml:link rel="alternate" hreflang="sr" href="https://bookmarkstudio.rs/rikna.html"/>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://bookmarkstudio.rs/rikna/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://bookmarkstudio.rs/en/rikna.html"/>
   </url>
   <url>

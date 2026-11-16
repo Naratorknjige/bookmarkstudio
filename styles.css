@@ -217,6 +217,17 @@ footer a{color:var(--ink);text-decoration:none}
 .legal-body a{color:var(--ink)}
 .legal-body a:hover{color:var(--red)}
 .legal-date{font:400 13px var(--mono);color:var(--muted)}
+.legal-hero .legal-date{margin:14px 0 0}
+.legal-table{overflow-x:auto;margin:0 0 14px;border:2px solid var(--ink);background:#fff}
+.legal-table table{border-collapse:collapse;width:100%;min-width:480px}
+.legal-table th,.legal-table td{border:1px solid var(--line);padding:10px 14px;text-align:left;vertical-align:top;font-size:14px;line-height:1.6}
+.legal-table th{background:var(--tint);color:var(--ink);font:500 12px/1.4 var(--mono);letter-spacing:.06em;text-transform:uppercase}
+.legal-docs{margin-top:56px;padding-top:24px;border-top:2px solid var(--ink)}
+.legal-docs p{margin:0 0 12px;color:var(--red);font:400 12px/1.2 var(--mono);letter-spacing:.2em;text-transform:uppercase}
+.legal-body .legal-docs ul{display:flex;flex-wrap:wrap;gap:6px 26px;margin:0}
+.legal-body .legal-docs li{padding:0;margin:0;font-size:15px}
+.legal-body .legal-docs li:before{display:none}
+.legal-body .legal-docs a[aria-current]{color:var(--red);text-decoration:none}
 
 /* Strana 404 */
 .notfound{min-height:calc(100vh - 220px);display:grid;place-items:center;align-content:center;text-align:center;padding:80px var(--pad)}
