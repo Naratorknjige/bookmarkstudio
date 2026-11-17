@@ -306,3 +306,14 @@ footer a{color:var(--ink);text-decoration:none}
 .download{padding:72px 20px}
 footer{flex-direction:column;padding:32px 20px 56px}
 }
+.docs{border-top:2px solid var(--ink)}
+.docs-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.docs-grid a{--c:var(--ink);display:flex;flex-direction:column;border:3px solid var(--ink);background:#fff;padding:24px 22px;box-shadow:8px 8px 0 var(--c);color:var(--text);text-decoration:none;transition:transform .15s,box-shadow .15s}
+.docs-grid a:nth-child(even){--c:var(--red)}
+.docs-grid a:hover,.docs-grid a:focus-visible{transform:translate(-3px,-3px);box-shadow:11px 11px 0 var(--c)}
+.docs-grid span{font:400 13px var(--mono);color:var(--red)}
+.docs-grid h3{font-size:20px;margin:10px 0 12px;color:var(--ink)}
+.docs-grid p{margin:0 0 20px;font-size:15px;line-height:1.6;flex:1}
+.docs-grid b{font:500 13px var(--mono);color:var(--ink)}
+@media (max-width:1000px){.docs-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.docs-grid{grid-template-columns:1fr}}
