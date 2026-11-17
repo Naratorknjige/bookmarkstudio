@@ -3,9 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Rikna – domaća aplikacija za čitaoce.">
+  <meta name="description" content="Koliko knjiga pročitaš za godinu? Rikna pamti svaku – i svaki dan čitanja.">
   <title>Rikna – Bookmark Studio</title>
-  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="../assets/rikna/ikona-64.png" type="image/png">
+  <link rel="apple-touch-icon" href="../assets/rikna/ikona-192.png">
   <link rel="alternate" hreflang="sr" href="./">
   <link rel="alternate" hreflang="en" href="../en/rikna.html">
   <!-- Pregled linka kad se deli (Viber, Facebook, WhatsApp...). Adrese ispod vode na bookmarkstudio.rs. -->
@@ -13,7 +14,7 @@
   <meta property="og:site_name" content="Bookmark Studio">
   <meta property="og:locale" content="sr_RS">
   <meta property="og:title" content="Rikna – Tvoje čitanje, zabeleženo">
-  <meta property="og:description" content="Domaća aplikacija za čitaoce: police, kalendar čitanja, recenzije i zajednica ljudi koji čitaju.">
+  <meta property="og:description" content="Koliko knjiga pročitaš za godinu? Rikna pamti svaku – i svaki dan čitanja.">
   <meta property="og:url" content="https://bookmarkstudio.rs/rikna/">
   <meta property="og:image" content="https://bookmarkstudio.rs/assets/og-rikna-sr.png">
   <meta property="og:image:width" content="1200">
@@ -22,8 +23,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;600&display=swap">
-  <link rel="stylesheet" href="../styles.css?v=20261117b">
-  <script defer src="../script.js"></script>
+  <link rel="stylesheet" href="../styles.css?v=20261117c">
+  <script defer src="../script.js?v=20261117c"></script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"MobileApplication","name":"Rikna","operatingSystem":"Android","applicationCategory":"LifestyleApplication","inLanguage":"sr","description":"Koliko knjiga pročitaš za godinu? Rikna pamti svaku – i svaki dan čitanja.","image":"https://bookmarkstudio.rs/assets/rikna/ikona-192.png","url":"https://bookmarkstudio.rs/rikna/","offers":{"@type":"Offer","price":"0","priceCurrency":"RSD"},"publisher":{"@type":"Organization","name":"Bookmark Studio","url":"https://bookmarkstudio.rs/"}}</script>
 </head>
 <body class="rikna-page">
   <header class="site-header" id="vrh">
@@ -37,55 +39,95 @@
   <a class="page-bookmark" href="#vrh" aria-label="Nazad na vrh"><svg viewBox="0 0 40 74" aria-hidden="true"><path d="M4-6v74l16-12 16 12V-6" fill="#ff3030" stroke="#1c1b19" stroke-width="4" stroke-linejoin="round"/></svg></a>
 
   <main>
-    <section class="app-hero dotted">
+    <section class="store-hero dotted">
       <div>
-        <p class="eyebrow">// Rikna</p>
-        <h1>Tvoje čitanje, <span>zabeleženo.</span></h1>
-        <p class="lead">Rikna je domaća aplikacija za čitaoce: police, kalendar čitanja, recenzije i zajednica ljudi koji čitaju.</p>
-        <div class="actions"><a class="button button-dark" href="#preuzmi">Preuzmi na Google Play</a><a class="button button-light" href="#preuzmi">Preuzmi na App Store</a></div>
-        <ul class="checks app-facts"><li>Besplatno</li><li>Android i iOS</li><li>24.000+ knjiga na srpskom</li></ul>
+        <div class="store-id">
+          <img class="store-icon" src="../assets/rikna/ikona.webp" width="120" height="120" alt="Ikona aplikacije Rikna">
+          <div>
+            <p class="eyebrow">// Aplikacija</p>
+            <h1>Rikna</h1>
+            <p class="store-dev">Bookmark Studio</p>
+          </div>
+        </div>
+        <p class="lead">Koliko knjiga pročitaš za godinu? Rikna pamti svaku – i svaki dan čitanja.</p>
+        <ul class="store-facts">
+          <li><strong>Besplatno</strong><span>uz Premium</span></li>
+          <li><strong>23.000+</strong><span>knjiga na srpskom</span></li>
+          <li><strong>24</strong><span>bedža</span></li>
+          <li><strong>7 dana</strong><span>Premium besplatno</span></li>
+        </ul>
+        <div class="actions"><a class="button button-dark" href="#preuzmi">Google Play</a><a class="button button-light" href="#preuzmi">App Store</a></div>
       </div>
-      <div class="rikna-icon" aria-hidden="true"><svg viewBox="0 0 24 28"><path d="M0 0h15l9 9v19l-12-8-12 8z" fill="#ff3030"/><path d="M15 0l9 9h-9z" fill="#fff"/></svg></div>
+      <figure class="store-graphic"><img src="../assets/rikna/grafika.webp" width="1024" height="500" alt="Rikna – beleži šta čitaš i složi svoju policu"></figure>
     </section>
 
-    <section class="app-intro section">
+    <section class="store-shots">
+      <div class="section-heading section-heading-plain"><h2>Kako izgleda</h2><div class="shot-nav"><span class="show-sm">povuci u stranu →</span><button class="hide-sm" type="button" data-shots="prev" aria-label="Prethodni ekrani">←</button><button class="hide-sm" type="button" data-shots="next" aria-label="Sledeći ekrani">→</button></div></div>
+      <div class="shot-row" tabindex="0" aria-label="Ekrani aplikacije">
+        <figure class="shot"><img src="../assets/rikna/ekran-01-polica.webp" width="540" height="960" loading="lazy" alt="Tvoja polica. Svaka knjiga na svom mestu."></figure>
+        <figure class="shot"><img src="../assets/rikna/ekran-02-kalendar.webp" width="540" height="960" loading="lazy" alt="Svaki dan čitanja se broji."></figure>
+        <figure class="shot"><img src="../assets/rikna/ekran-03-ocena.webp" width="540" height="960" loading="lazy" alt="Ocena i utisak, dok su sveži."></figure>
+        <figure class="shot"><img src="../assets/rikna/ekran-04-feed.webp" width="540" height="960" loading="lazy" alt="Vidi šta čitaju ljudi kojima veruješ."></figure>
+        <figure class="shot"><img src="../assets/rikna/ekran-05-skener.webp" width="540" height="960" loading="lazy" alt="Okreni knjigu, skeniraj – na polici je."></figure>
+        <figure class="shot"><img src="../assets/rikna/ekran-06-bedzevi.webp" width="540" height="960" loading="lazy" alt="24 bedža za navike koje ostaju."></figure>
+        <figure class="shot"><img src="../assets/rikna/ekran-07-cilj.webp" width="540" height="960" loading="lazy" alt="Postavi cilj i gledaj kako se puni."></figure>
+        <figure class="shot"><img src="../assets/rikna/ekran-08-izgled.webp" width="540" height="960" loading="lazy" alt="Izaberi izgled svoje police."></figure>
+      </div>
+    </section>
+
+    <section class="store-about section">
       <h2>O aplikaciji</h2>
-      <p>Rikna je aplikacija za one koji čitaju. Knjige koje čitaš i koje si pročitao stoje na tvojoj polici, kalendar pamti svaki dan čitanja, a utisci koje napišeš vide ljudi koji te prate. U katalogu je preko 24.000 knjiga na srpskom, sa koricama i opisima, a knjigu koje nema dodaješ očitavanjem barkoda.</p>
-    </section>
-
-    <section class="screens">
-      <div class="section-heading section-heading-plain"><h2>Kako izgleda</h2><span>povuci u stranu →</span></div>
-      <!-- Pravi skrinšot: umesto <span>[SKRINŠOT 01]</span> stavi <img src="assets/screens/polica.png" alt="Polica"> -->
-      <div class="phone-row" tabindex="0" aria-label="Ekrani aplikacije">
-        <figure class="phone"><div class="phone-body"><div class="phone-screen"><span>[SKRINŠOT 01]</span></div></div><figcaption>Polica – Čitam, Pročitano, Lista želja</figcaption></figure>
-        <figure class="phone"><div class="phone-body"><div class="phone-screen"><span>[SKRINŠOT 02]</span></div></div><figcaption>Kalendar čitanja i niz dana</figcaption></figure>
-        <figure class="phone"><div class="phone-body"><div class="phone-screen"><span>[SKRINŠOT 03]</span></div></div><figcaption>Ocena i utisak o pročitanoj knjizi</figcaption></figure>
-        <figure class="phone"><div class="phone-body"><div class="phone-screen"><span>[SKRINŠOT 04]</span></div></div><figcaption>Feed – utisci ljudi koje pratiš</figcaption></figure>
+      <div>
+        <p class="store-big">Koliko knjiga pročitaš za godinu dana? Većina nas ne zna. <span>Rikna zna.</span></p>
+        <p>Svaka knjiga koju završiš staje na tvoju policu, sa ocenom i onim što ti je ostalo u glavi. Svaki dan kad čitaš ostaje u kalendaru. Posle mesec dana vidiš naviku. Posle godinu dana vidiš celu svoju čitalačku godinu.</p>
       </div>
     </section>
 
-    <section class="features strip-top">
-      <h2>Šta je Rikna</h2>
-      <p class="features-lead">Rikna je domaća aplikacija za čitaoce. Napravljena je oko jedne jednostavne stvari: da se zna šta si pročitao i kada, bez vođenja beležaka po sveskama i aplikacijama koje nisu za to.</p>
+    <section class="features strip-top store-features">
+      <h2>Šta Rikna radi</h2>
       <div class="feature-grid">
-        <article><span>01</span><h3>Tvoja polica</h3><p>Knjiga ide u jedan od tri reda – Čitam, Pročitano ili Lista želja. Uz pročitanu ide ocena i utisak, koliko god kratak želiš. Policu možeš preneti iz druge aplikacije; dovoljan je izvoz u CSV.</p></article>
-        <article><span>02</span><h3>Navika koja se vidi</h3><p>Kalendar beleži svaki dan kad si čitao. Niz dana raste, godišnji cilj pokazuje gde si, a 24 bedža stižu kako ideš dalje – za prvu knjigu, za jutarnje čitanje, za ispunjen cilj.</p></article>
-        <article><span>03</span><h3>Zajednica</h3><p>U feedu su utisci ljudi koje pratiš. Recenzije se komentarišu i lajkuju, a bukfluenseri uz svoj tekst dodaju i link ka videu. Autori i izdavačke kuće imaju profil sa svojim izdanjima, najavljuju promocije i potpisivanja i objavljuju akcije.</p></article>
-        <article><span>04</span><h3>Katalog</h3><p>Preko 24.000 knjiga na srpskom, sa koricama, opisima, godinom i brojem strana. Ako knjige nema, očitaš barkod sa zadnje korice ili je dodaš ručno.</p></article>
+        <article><span>01</span><h3>Polica koja liči na policu</h3><p>Čitam, Pročitano i Lista želja – tri reda, kao kod kuće. Knjige stoje hrptovima jedna uz drugu, a izgled police biraš sam.</p></article>
+        <article><span>02</span><h3>Niz koji ne želiš da prekineš</h3><p>Jedan dodir i dan je zabeležen. Niz raste, godišnji cilj se puni, a 24 bedža stižu usput – za prvu knjigu, za jutarnje čitanje, za leto puno knjiga. Najbolji razlog da večeras ipak otvoriš knjigu.</p></article>
+        <article><span>03</span><h3>Utisak dok je svež</h3><p>Čim zatvoriš knjigu, daj joj ocenu i napiši šta misliš, koliko god kratko. Ako snimaš, dodaj link ka svom videu.</p></article>
+        <article><span>04</span><h3>Ljudi koji čitaju</h3><p>Prati prijatelje, autore i izdavače. U feedu vidiš šta čitaju i šta misle, a preporuka od nekog kome veruješ vredi više od svake liste.</p></article>
+      </div>
+    </section>
+
+    <section class="store-more section">
+      <div class="section-heading"><h2>I još</h2><span>// 06</span></div>
+      <ul class="more-grid">
+        <li>Katalog od više od 23.000 knjiga na srpskom, sa koricama i opisima</li>
+        <li>Skener – okreni knjigu, očitaj barkod i već je na polici</li>
+        <li>Widgeti za početni ekran: polica, knjiga koju čitaš i niz dana</li>
+        <li>Polica, bedž ili recenzija kao slika za deljenje</li>
+        <li>Promocije, potpisivanja i popusti izdavača na jednom mestu</li>
+        <li>Prenos police iz druge aplikacije za par sekundi</li>
+      </ul>
+    </section>
+
+    <section class="store-authors section">
+      <div class="authors-box">
+        <h2>Za autore i izdavače</h2>
+        <p>Svoj profil, katalog izdanja, najave događaja i akcije. Čitaoci vas prate kao i svakog drugog.</p>
       </div>
     </section>
 
     <section class="free-band">
-      <div><p class="eyebrow">// Cena</p><h2>Rikna je besplatna.</h2><p>Premium skida ograničenja besplatne verzije i otvara analitiku profila.</p></div>
-      <div class="price-card"><span>Besplatno</span><strong>0 din</strong><small>Polica, kalendar, recenzije, feed.</small></div>
-      <div class="price-card accent"><span>Premium</span><strong>Uskoro</strong><small>Bez ograničenja i sa analitikom profila.</small></div>
+      <div><p class="eyebrow">// Cena</p><h2>Besplatno, uz Premium za one koji čitaju mnogo.</h2><p>Rikna se koristi besplatno. Premium skida ograničenja: neograničeno knjiga i recenzija, cela istorija kalendara, spasavanje niza kad zaboraviš da označiš dan, kožna i meka polica, zlatni okvir oko slike i analitika profila.</p></div>
+      <div class="price-card"><span>Besplatno</span><strong>0 din</strong><small>Polica, kalendar, recenzije, feed i katalog.</small></div>
+      <div class="price-card accent"><span>Premium</span><strong>7 dana besplatno</strong><small>Sve iz besplatne verzije, bez ograničenja.</small></div>
     </section>
 
-    <section id="preuzmi" class="download dotted">
-      <h2>Preuzmi Riknu i <span>prenesi svoju policu</span> za par sekundi</h2>
-      <p>Izvezi CSV iz stare aplikacije, ubaci ga u Riknu, i to je to.</p>
-      <div class="actions"><a class="button button-dark" href="#">Google Play</a><a class="button button-light" href="#">App Store</a></div>
+    <section id="preuzmi" class="download store-download dotted">
+      <figure class="store-banner"><img src="../assets/rikna/logo-baner.webp" width="1024" height="500" loading="lazy" alt="Rikna – tvoja polica, tvoje navike, tvoja zajednica"></figure>
+      <div>
+        <h2>Preuzmi Riknu i <span>prenesi svoju policu</span> za par sekundi</h2>
+        <p>Rikna je domaća aplikacija, na srpskom, za ljude koji čitaju.</p>
+        <div class="actions"><a class="button button-dark" href="#preuzmi">Google Play</a><a class="button button-light" href="#preuzmi">App Store</a></div>
+        <p class="store-soon">// Uskoro u prodavnicama</p>
+      </div>
     </section>
+
     <section id="dokumenti" class="docs section">
       <div class="section-heading"><h2>Pravila i privatnost</h2><span>// 4 dokumenta</span></div>
       <div class="docs-grid">
